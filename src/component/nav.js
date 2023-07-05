@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import logoImg from '../asset/Main Logo.svg';
 
 const pages = ['Home +', 'About', 'Service', 'Gallery', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,11 +37,11 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static" sx={{ bgcolor: '#fff', boxShadow: 'none' }}>
+        <AppBar position="static" sx={{ bgcolor: '#fff', boxShadow: 'none', padding: '0 150px', paddingTop: '45px' }}>
             <Toolbar disableGutters>
-                <Box sx={{ flexGrow: 1 }} >
+                <Box sx={{ flexGrow: 1, float: 'left' }} >
 
-                    <img style={{ float: 'left' }} src={logoImg} />
+                    <img src={logoImg} />
                 </Box>
 
                 <Box sx={{ flexGrow: 1, justifyContent: 'end', display: { xs: 'flex', md: 'none' } }}>
@@ -51,6 +51,7 @@ function ResponsiveAppBar() {
                         aria-controls="menu-appbar"
                         aria-haspopup="true"
                         onClick={handleOpenNavMenu}
+
                     >
                         <MenuIcon />
                     </IconButton>
@@ -83,17 +84,17 @@ function ResponsiveAppBar() {
                         </Button>
                     </Menu>
                 </Box>
-                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignItems: { md: 'center' }, flex: { md: 'none' }, gap: '25px', }}>
                     {pages.map((page) => (
                         <Button
                             key={page}
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: '#8B8B8B', display: 'block', textTransform: 'capitalize' }}
+                            sx={{ my: 2, color: '#8B8B8B', fontSize: '16px', display: 'block', textTransform: 'capitalize' }}
                         >
                             {page}
                         </Button>
                     ))}
-                    <Button sx={{ color: 'inherit', backgroundColor: '#ff64ae', width: '158px', borderRadius: '50px', textTransform: 'capitalize' }}
+                    <Button sx={{ fontSize: '16px', color: 'inherit', backgroundColor: '#ff64ae', width: '158px', height: '52px', borderRadius: '50px', textTransform: 'capitalize' }}
                     >
                         Contact
                     </Button>

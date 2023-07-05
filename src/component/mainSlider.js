@@ -19,18 +19,18 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function BasicStack() {
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '100%', marginTop: '150px' }}>
             <Stack
                 sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 direction={{ md: 'column', lg: 'row' }}
                 spacing={{ xs: 1, sm: 2, md: 4 }}>
-                <Item sx={{ flexDirection: 'column', boxShadow: 'none' }} >
-                    <Typography variant="h3" color="initial">Clinic & beauty
+                <Item sx={{ display: 'flex', flexDirection: 'column', boxShadow: 'none', maxWidth: '500px', justifyContent: { md: 'center' }, textAlign: { lg: 'start' }, letterSpacing: '1.2px', rowGap: { lg: '20px' } }} >
+                    <Typography sx={{ fontWeight: '600', color: '#091156' }} variant="h3" color="initial" >Clinic & beauty
                         consultant</Typography>
-                    <Typography variant="subtitle1" color="initial">It is a long established fact that a reader will be
+                    <Typography sx={{ fontWeight: '500', color: '#091156' }} variant="subtitle1" color="initial">It is a long established fact that a reader will be
                         by the readable content of a page.</Typography>
 
-                    <Button sx={{ color: '#fff', backgroundColor: '#ff64ae', width: '200px', height: '58px', borderRadius: '50px', textTransform: 'capitalize' }}
+                    <Button sx={{ fontSize: '16px', fontWeight: '500', letterSpacing: '1.2px', color: '#fff', backgroundColor: '#ff64ae', width: '200px', height: '58px', borderRadius: '50px', textTransform: 'capitalize', marginTop: '15px' }}
                     >
                         More Details
                     </Button>
